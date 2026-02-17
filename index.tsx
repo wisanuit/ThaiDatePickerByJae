@@ -99,6 +99,7 @@ const ThaiDatePicker: React.FC<ThaiDatePickerProps> = ({
   }, [value, withTime]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setViewMode('day');
     if (disabled) return;
     setAnchorEl(event.currentTarget.parentElement); // Anchor to the input container
     const propDate = parseAD(value);
